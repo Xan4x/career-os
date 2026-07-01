@@ -4,9 +4,9 @@
 
 Ce domaine regroupe l'ensemble de mes expériences liées aux architectures d'accès distant sécurisées.
 
-Il couvre aussi bien les solutions VPN traditionnelles que les architectures modernes de bastion, d'accès administrateur sécurisé et d'automatisation des accès.
+Il couvre aussi bien les plateformes VPN destinées aux utilisateurs que les solutions de Bastion destinées aux accès administrateurs.
 
-Ces expériences illustrent une évolution progressive de mon parcours, depuis l'administration de plateformes VPN jusqu'à la conception de solutions sécurisées destinées aux environnements Cloud.
+Au cours de ma carrière, j'ai participé à l'exploitation, la modernisation, l'automatisation et la conception de plusieurs plateformes Remote Access répondant à des usages différents.
 
 ---
 
@@ -30,17 +30,31 @@ Ce domaine couvre notamment les concepts suivants :
 - Configuration Validation
 - Compliance Validation
 - Deployment Verification
+- Capacity Planning
+- Environment Segregation
+- Security Hardening
+- Platform Evolution
+- Platform Migration
 
 ---
 
 # Technologies rencontrées
 
-## Solutions d'accès distant
+## Plateformes Remote Access
 
-- Pulse Secure / Ivanti Connect Secure
-- StrongSwan
-- Warpgate
-- Cisco ASA
+### VPN utilisateurs
+
+- Pulse Secure / Ivanti Connect Secure (SSL VPN / UDP)
+- StrongSwan (IPsec)
+- Cisco ASA (IPsec / SSL VPN)
+
+### Bastion
+
+- Warpgate (SSH)
+
+## Virtualisation
+
+- VMware
 
 ## Cloud
 
@@ -68,12 +82,34 @@ Ce domaine couvre notamment les concepts suivants :
 - DNS
 - Firewalling
 - Load Balancing
+- PKI
+- CMDB
 
 ---
 
 # Projets associés
 
-## Modernisation Pulse Secure
+## Remote Access Platform Evolution
+
+Évolution progressive de la plateforme Remote Access historique.
+
+Cette initiative couvre notamment :
+
+- la virtualisation des appliances ;
+- le capacity planning ;
+- la montée en charge liée au COVID ;
+- l'industrialisation de la plateforme ;
+- le Security Hardening ;
+- la préparation de la transition vers StrongSwan.
+
+Technologies principales :
+
+- Pulse Secure
+- VMware
+- Python
+- Bash
+- Selenium
+- Ansible
 
 Migration des appliances Pulse Secure physiques vers une infrastructure virtualisée.
 
@@ -104,6 +140,16 @@ Ces tests vérifiaient notamment :
 
 Cette approche permettait de détecter rapidement les erreurs de configuration et de fiabiliser les déploiements.
 
+Cette plateforme a été conçue afin de remplacer progressivement la partie IPsec des solutions Pulse Secure / Ivanti Connect Secure.
+
+Les principaux objectifs étaient :
+
+- réduire les coûts de licences ;
+- réduire la dépendance à une solution propriétaire ;
+- améliorer la sécurité face aux CVE récurrentes ;
+- faciliter l'automatisation ;
+- standardiser la plateforme.
+
 ---
 
 ## AWS Bastion Platform
@@ -121,6 +167,8 @@ Déploiement automatique de plateformes de test via GitLab CI/CD.
 Exécution de tests fonctionnels automatisés.
 
 Validation continue de la plateforme dans l'environnement d'acceptation à l'aide de Hurl.
+
+Cette plateforme répond à un besoin différent des plateformes VPN traditionnelles en sécurisant les accès privilégiés des administrateurs vers les environnements AWS.
 
 ---
 

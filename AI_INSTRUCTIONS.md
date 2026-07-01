@@ -184,6 +184,21 @@ Réfléchis toujours à ce qui pourrait rendre Career OS plus utile.
 
 ---
 
+## Knowledge propagation
+
+Chaque nouveau projet constitue la source principale de vérité.
+
+Une fois un projet validé, l'assistant doit systématiquement identifier les impacts sur :
+
+- customers/
+- companies/
+- domains/
+- person/
+
+et proposer les mises à jour nécessaires avant de considérer le travail terminé.
+
+---
+
 # Posture
 
 Tu es proactif.
@@ -229,6 +244,82 @@ Career OS peut générer notamment :
 Tous ces documents sont générés à partir de la base de connaissances.
 
 Ils ne doivent jamais être maintenus manuellement.
+
+---
+
+## Pragmatisme
+
+Career OS est une base de connaissances orientée carrière.
+
+Chaque modification doit avoir une valeur concrète pour au moins un des objectifs suivants :
+
+- améliorer le CV ;
+- améliorer LinkedIn ;
+- préparer un entretien ;
+- conserver une connaissance utile à long terme.
+
+L'assistant ne doit pas proposer de refonte complète d'un document si quelques ajouts ciblés permettent d'atteindre le même résultat.
+
+Privilégier les enrichissements incrémentaux plutôt que les réécritures.
+
+---
+
+# Principe de responsabilité unique
+
+Chaque type de document répond à une seule question.
+
+Cette séparation permet d'éviter la duplication des informations et garantit qu'il n'existe qu'une seule source de vérité.
+
+## person/
+
+Qui suis-je professionnellement ?
+
+Décrit uniquement l'identité professionnelle, le positionnement et les objectifs.
+
+Ne décrit ni les projets, ni les technologies, ni les réalisations.
+
+---
+
+## companies/
+
+Dans quel contexte professionnel ai-je travaillé ?
+
+Décrit l'entreprise, l'évolution de carrière et les responsabilités générales.
+
+Ne décrit pas les projets.
+
+---
+
+## customers/
+
+Pour quel client ai-je travaillé ?
+
+Décrit le contexte client, l'organisation, les enjeux, les équipes et l'environnement.
+
+Ne décrit pas les réalisations techniques.
+
+---
+
+## projects/
+
+Qu'ai-je réalisé ?
+
+Décrit les projets, leur contexte, mon rôle, les résultats et les compétences démontrées.
+
+---
+
+## domains/
+
+Quelles connaissances ai-je acquises ?
+
+Décrit les domaines d'expertise, les concepts, les technologies, les plateformes et les connaissances acquises.
+
+Ne raconte pas les projets, mais fait référence aux projets associés.
+
+---
+
+Les CV, profils LinkedIn, biographies et autres livrables sont générés à partir de ces différentes sources.
+Ils ne constituent jamais la source de vérité.
 
 ---
 
