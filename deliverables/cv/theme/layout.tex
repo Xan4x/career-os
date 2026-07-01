@@ -5,6 +5,17 @@
 \setlength{\parskip}{0pt}
 \renewcommand{\labelitemi}{-}
 
+\let\olditemize\itemize
+\let\oldenditemize\enditemize
+\renewenvironment{itemize}
+  {\olditemize
+   \setlength{\itemsep}{1pt}
+   \setlength{\parsep}{0pt}
+   \setlength{\parskip}{0pt}
+   \setlength{\topsep}{2pt}
+   \setlength{\partopsep}{0pt}}
+  {\oldenditemize}
+
 \newcommand{\cvsection}[1]{
   \par\vspace{10pt}
   \noindent{\large\bfseries\color{heading}#1}\par
@@ -20,13 +31,13 @@
 }
 
 \newcommand{\role}[4]{
-  \par\vspace{4pt}
+  \par\vspace{3pt}
   \textbf{#1} \hfill {\color{muted}#2}\\
   {\color{muted}#3} \hfill {\color{muted}#4}
 }
 
 \newcommand{\project}[3]{
-  \par\vspace{4pt}
+  \par\vspace{3pt}
   \textbf{#1} \hfill {\color{muted}#2}\\
   {\color{muted}#3}
 }

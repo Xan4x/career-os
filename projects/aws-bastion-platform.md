@@ -54,7 +54,13 @@ Teleport a été écarté principalement en raison de son modèle de licence.
 
 Boundary a été écarté en raison de sa complexité au regard des besoins de la Commission européenne.
 
-À mon arrivée sur le projet, j'ai réalisé une analyse fonctionnelle de Warpgate au moyen d'une matrice **MoSCoW** afin de vérifier son adéquation avec les exigences du projet.
+À mon arrivée sur le projet, j'ai challengé la matrice **MoSCoW** existante avec le produit Warpgate et complété l'évaluation afin de vérifier son adéquation avec les exigences du projet.
+
+Cette matrice, documentée dans `artifacts/docs.zip` (`docs/moscow.md`), couvre 259 exigences réparties notamment entre exigences **Must Have**, **Should Have** et **Could Have**.
+
+La partie Compliance de la matrice a été définie par l'équipe Compliance.
+
+La partie Core Features a été définie au travers d'échanges avec le Lead Architect et le Product Owner afin de traduire les besoins fonctionnels du MVP en critères d'évaluation concrets.
 
 Les principaux critères retenus étaient :
 
@@ -65,6 +71,30 @@ Les principaux critères retenus étaient :
 - couverture fonctionnelle des besoins.
 
 Cette analyse a confirmé Warpgate comme la solution la plus adaptée pour la réalisation du MVP.
+
+L'analyse MoSCoW a permis de structurer la décision en distinguant :
+
+- les exigences indispensables pour livrer un MVP exploitable ;
+- les fonctionnalités importantes mais non bloquantes ;
+- les éléments pouvant être reportés après la première livraison ;
+- les fonctionnalités non nécessaires au périmètre initial.
+
+Elle a également servi de support de discussion avec le Lead Architect, le Product Owner et le référent Compliance afin d'aligner les attentes fonctionnelles, les exigences Compliance, les contraintes de sécurité et la simplicité d'exploitation.
+
+Cette approche a permis de justifier le choix de Warpgate sur des critères concrets plutôt que sur une préférence technologique.
+
+La matrice couvrait notamment :
+
+- les exigences de bastion SSH ;
+- les clients compatibles ;
+- l'authentification locale et MFA ;
+- le RBAC ;
+- l'audit des accès ;
+- l'export des logs ;
+- la gestion des secrets ;
+- les contraintes de backup, continuité et restauration ;
+- les exigences de déploiement, d'exploitation et de monitoring ;
+- les contraintes de licence, de support, de maturité produit et d'Open Source.
 
 ---
 
@@ -90,8 +120,8 @@ La plateforme repose notamment sur :
 En tant qu'architecte principal de la plateforme, mes responsabilités comprenaient notamment :
 
 - conception de l'architecture de la plateforme ;
-- analyse fonctionnelle et validation de Warpgate ;
-- rédaction de l'étude MoSCoW ;
+- challenge de la matrice MoSCoW avec le produit Warpgate ;
+- complétion de l'évaluation produit pour vérifier l'adéquation de Warpgate avec les exigences Compliance et les Core Features ;
 - définition de l'architecture technique ;
 - conception de la chaîne CI/CD ;
 - définition de la stratégie de validation et de tests ;
@@ -107,6 +137,34 @@ Les décisions d'architecture étaient préparées avec le Lead Architect puis d
 ## Architecture
 
 Conception d'une plateforme de bastion permettant de contrôler les accès administrateurs aux environnements AWS.
+
+---
+
+## Analyse fonctionnelle MoSCoW et Compliance
+
+Challenge de la matrice MoSCoW avec le produit Warpgate et complétion de l'évaluation produit sur 259 exigences.
+
+L'objectif était de vérifier que la solution pouvait couvrir le périmètre attendu du MVP sans introduire une complexité excessive.
+
+La matrice combinait :
+
+- les exigences Compliance définies par l'équipe Compliance ;
+- les Core Features définies avec le Lead Architect et le Product Owner ;
+- l'évaluation de Warpgate face aux besoins du MVP ;
+- l'identification des limites acceptées, des écarts et des sujets délégués aux services de support.
+
+Cette analyse a notamment permis :
+
+- de comparer les besoins réels du projet avec les fonctionnalités disponibles ;
+- de challenger les exigences avec les capacités réelles de Warpgate ;
+- de compléter l'évaluation produit pour identifier ce qui était couvert, partiellement couvert, non couvert ou délégué ;
+- d'identifier les exigences indispensables pour sécuriser les accès SSH administrateurs ;
+- de distinguer les fonctionnalités nécessaires au MVP de celles pouvant être reportées ;
+- de fournir un support clair pour la validation avec le Lead Architect, le Product Owner et le référent Compliance ;
+- de documenter les écarts entre exigences Compliance, fonctionnalités produit et responsabilités déléguées ;
+- de confirmer que Warpgate répondait au meilleur compromis entre sécurité, simplicité, Open Source et absence de coût de licence.
+
+La matrice a également permis d'identifier clairement les limites acceptées pour le MVP, par exemple les fonctionnalités non incluses au périmètre initial ou déléguées à des services de support.
 
 ---
 
@@ -231,3 +289,12 @@ Commission européenne
 ## Période
 
 2024 - En cours
+
+## Documents associés
+
+- `artifacts/docs.zip`
+- `artifacts/docs.zip/docs/moscow.md`
+- `artifacts/docs.zip/docs/PAAAS_Project_Overview.md`
+- `artifacts/docs.zip/docs/PAAAS_CICD.md`
+- `artifacts/docs.zip/docs/PAAAS_access_design.md`
+- `artifacts/docs.zip/docs/PAAAS_LMA_design.md`

@@ -1,32 +1,33 @@
 \cvsection{Selected Projects}
 
-\project{AWS Privileged Access Platform}{2024 - Present}{Warpgate, AWS, Vault, GitLab CI/CD, Ansible, Node-RED, Hurl, Prometheus, Go}
+\project{AWS Administration Bastion Platform}{2024 - Present}{Warpgate, AWS, Vault, GitLab CI/CD, Ansible, Node-RED, Hurl, Prometheus, Go}
 \begin{itemize}
   \item Designed an Open Source bastion platform to secure administrator SSH access to AWS environments.
-  \item Validated Warpgate through a MoSCoW functional analysis after comparison with market alternatives.
-  \item Designed the CI/CD chain covering linting, documentation generation, build, automated deployment, functional testing and acceptance validation.
-  \item Automated deployment with Ansible, managed secrets with HashiCorp Vault and automated technical workflows with Node-RED.
+  \item Challenged a 259-requirement MoSCoW matrix against Warpgate and completed the product assessment with the Lead Architect, Product Owner and Compliance.
+  \item Used the assessment to clarify MVP scope, covered requirements, accepted gaps, product limits and topics delegated to supporting services.
+  \item Designed the CI/CD chain for linting, documentation generation, build, automated deployment, functional tests and acceptance validation.
+  \item Automated deployment with Ansible, managed secrets with HashiCorp Vault and technical workflows with Node-RED.
   \item Developed a Go Prometheus exporter to expose platform-specific metrics not available natively.
-  \item Delivered an industrialized MVP improving access centralization, traceability, auditability and reduction of direct SSH access.
+  \item Delivered an MVP improving access centralization, traceability, audit support and reduction of direct SSH access.
 \end{itemize}
 
-\project{Migration to an Open Source Remote Access Platform}{2021 - Present}{StrongSwan, Linux, F5, PKI, NetBox, AWX, GitLab CI/CD}
+\project{Open Source VPN Platform Migration}{2021 - Present}{StrongSwan, Linux, F5, PKI, NetBox, AWX, GitLab CI/CD}
 \begin{itemize}
-  \item Contributed to the architecture and migration of a StrongSwan-based IPsec platform replacing part of the historical Pulse Secure / Ivanti Connect Secure service.
-  \item Designed architectures for administrator populations and supported migration from the legacy platform.
+  \item Contributed to the architecture and migration of a StrongSwan IPsec platform replacing part of the historical Pulse Secure / Ivanti Connect Secure service.
+  \item Designed the architecture for administrator access and supported migration from the legacy platform.
   \item Integrated NetBox as source of truth, IPAM and inventory for platform automation.
   \item Integrated AWX for provisioning, configuration, updates and platform testing.
   \item Moved local Git repositories to GitLab and introduced the first CI/CD pipelines, initially focused on linting.
-  \item Implemented compliance tests verifying configuration, certificates and expected platform state after deployment or change.
+  \item Implemented compliance tests to check configuration, certificates and platform state after deployment or change.
 \end{itemize}
 
 \project{Enterprise Remote Access Platform Modernization}{2016 - 2021}{Pulse Secure / Ivanti Connect Secure, VMware, F5 BIG-IP, Python, Bash, Ansible, Selenium}
 \begin{itemize}
-  \item Participated in the modernization of a critical Remote Access platform serving a 40,000-user population across European institutions, agencies and external providers.
-  \item Supported the move from physical appliances to a virtualized, highly available and more scalable architecture.
-  \item Worked on appliance sizing, capacity planning, user profiles, environment segregation and load balancing architecture, including COVID-era scaling to around 40,000 concurrent users.
-  \item Contributed to a multi-site platform design including 26 Ivanti VMs, 12 distinct profiles / environments and 8 StrongSwan VMs after stabilization.
+  \item Participated in the modernization of a critical Remote Access platform serving around 40,000 users across European institutions, agencies and external providers.
+  \item Supported the move from physical appliances to a virtualized, highly available and more scalable platform.
+  \item Worked on appliance sizing, capacity planning, user profiles, environment segregation and load balancing, including COVID scaling to around 40,000 concurrent users.
+  \item Contributed to a multi-site platform with 26 Ivanti VMs, 12 profiles / environments and 8 StrongSwan VMs after stabilization.
   \item Developed automation with Python, Bash and Ansible for provisioning, configuration generation and administration tasks.
   \item Helped reduce new appliance deployment time from around two hours to less than one hour depending on the operation.
-  \item Implemented security hardening automation around Ivanti Integrity Checks, compromise detection, VM shutdown, evidence preservation for CERT, restaging and Selenium-based validation.
+  \item Implemented security hardening automation around Ivanti Integrity Checks, compromise detection, VM shutdown, evidence preservation for CERT, restaging and Selenium validation.
 \end{itemize}
