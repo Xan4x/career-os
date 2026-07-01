@@ -48,7 +48,15 @@ On-Premises
 
 Infrastructure virtualisée VMware.
 
-Plateforme critique utilisée quotidiennement par plusieurs dizaines de milliers d'utilisateurs.
+Plateforme critique utilisée quotidiennement par plusieurs dizaines de milliers d'utilisateurs, avec une capacité redimensionnée pendant la période COVID pour supporter jusqu'à environ 40 000 utilisateurs simultanés.
+
+Données d'échelle issues de la présentation interne :
+
+- population Remote Access d'environ 40 000 utilisateurs ;
+- 40 000 licences VPN et environ 300 accès RDP ;
+- infrastructure répartie sur deux sites ;
+- première année COVID : par site, 1 appliance physique, 3 VM pour les accès Private, 2 VM Corporate avec authentification SAML et 13 VM Corporate avec authentification par certificat ;
+- infrastructure stabilisée : 26 VM Ivanti, 12 profils / environnements distincts et 8 VM StrongSwan.
 
 ---
 
@@ -84,7 +92,15 @@ La crise sanitaire a profondément modifié les besoins de la plateforme.
 
 Un projet préparatoire a été lancé de manière confidentielle quelques jours avant le confinement afin d'anticiper l'augmentation massive du télétravail.
 
-La plateforme a été redimensionnée afin de supporter plusieurs dizaines de milliers d'utilisateurs simultanés.
+La plateforme a été redimensionnée afin de supporter jusqu'à environ 40 000 utilisateurs simultanés.
+
+Cette montée en charge s'est appuyée sur :
+
+- la mise en place de Load Balancers F5 ;
+- la création d'appliances virtuelles sur VMware ;
+- l'utilisation de licences ICE / In Case of Emergency ;
+- la séparation des populations Private, Corporate SAML et Corporate certificate ;
+- un suivi quotidien de la capacité, des licences, des vCPU, du transport VPN, du CPU Ready et des drops réseau.
 
 ---
 
@@ -153,6 +169,7 @@ Travail sur :
 - les profils utilisateurs ;
 - la segmentation des environnements ;
 - l'équilibrage de charge.
+- l'évolution vers une infrastructure multi-sites composée notamment de 26 VM Ivanti, 12 profils / environnements et 8 VM StrongSwan.
 
 ---
 
@@ -218,6 +235,8 @@ Les principales difficultés du projet concernaient :
 Cette initiative a permis :
 
 - d'augmenter significativement la capacité de la plateforme ;
+- de soutenir une montée en charge jusqu'à environ 40 000 utilisateurs simultanés pendant la période COVID ;
+- de faire évoluer la plateforme vers une infrastructure multi-sites structurée autour de 26 VM Ivanti, 12 profils / environnements et 8 VM StrongSwan ;
 - d'améliorer la rapidité de déploiement des nouvelles appliances ;
 - de renforcer la sécurité des infrastructures ;
 - de réduire les opérations manuelles ;
@@ -312,3 +331,4 @@ Commission européenne
 ## Documents associés
 
 - Présentation interne retraçant l'évolution de la plateforme Remote Access.
+- `artifacts/RemoteACcessHistorique.pptx`

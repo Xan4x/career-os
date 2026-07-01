@@ -98,6 +98,8 @@ Cette initiative couvre notamment :
 - la virtualisation des appliances ;
 - le capacity planning ;
 - la montée en charge liée au COVID ;
+- le redimensionnement d'une plateforme Remote Access pour environ 40 000 utilisateurs ;
+- l'exploitation d'une infrastructure multi-sites composée notamment de 26 VM Ivanti, 12 profils / environnements et 8 VM StrongSwan ;
 - l'industrialisation de la plateforme ;
 - le Security Hardening ;
 - la préparation de la transition vers StrongSwan.

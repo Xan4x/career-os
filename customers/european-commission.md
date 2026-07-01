@@ -4,7 +4,7 @@
 
 Depuis novembre 2015, je réalise une mission longue durée auprès de la Commission européenne en tant que consultant, successivement via Dimension Data, NTT Ltd puis NTT DATA.
 
-Cette mission s'inscrit dans un environnement international particulièrement exigeant en matière d'infrastructure, de cybersécurité et de disponibilité des services. Les plateformes développées et exploitées sont utilisées quotidiennement par les institutions européennes, leurs agences, ainsi que par de nombreux collaborateurs et prestataires externes.
+Cette mission s'inscrit dans un environnement international particulièrement exigeant en matière d'infrastructure, de cybersécurité et de disponibilité des services. Les plateformes développées et exploitées sont utilisées quotidiennement par les institutions européennes, leurs agences, ainsi que par de nombreux collaborateurs et prestataires externes. Certaines plateformes Remote Access ont dû être redimensionnées pour supporter jusqu'à environ 40 000 utilisateurs simultanés pendant la période COVID.
 
 Au fil des années, cette mission m'a permis d'évoluer progressivement d'un rôle d'ingénieur infrastructure vers un rôle d'IT Solutions Architect spécialisé dans les solutions d'accès sécurisé et les plateformes d'administration.
 

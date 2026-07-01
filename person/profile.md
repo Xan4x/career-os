@@ -11,6 +11,8 @@ E-mail : audrey.blaise@trollprod.org
 
 LinkedIn : www.linkedin.com/in/audrey-blaise-32136270
 
+tel: +33 6 32 73 65 19
+
 ---
 
 # Poste actuel

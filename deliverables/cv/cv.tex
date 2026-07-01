@@ -1,0 +1,31 @@
+\documentclass[10pt,a4paper]{article}
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+
+\input{theme/colors}
+\input{theme/fonts}
+\input{theme/layout}
+
+\begin{document}
+
+\cvheader
+  {Audrey Blaise}
+  {IT Solutions Architect | Secure Infrastructure | Remote Access}
+  {Luxembourg | +33 6 32 73 65 19 | \href{https://www.linkedin.com/in/audrey-blaise-32136270}{linkedin.com/in/audrey-blaise-32136270}}
+  {audrey.blaise@trollprod.org}
+
+\input{sections/summary}
+\input{sections/skills}
+\input{sections/experience}
+\input{sections/projects}
+\input{sections/languages}
+
+\end{document}

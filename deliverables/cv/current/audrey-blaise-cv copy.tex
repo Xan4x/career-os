@@ -1,0 +1,146 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[a4paper,margin=1.35cm]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+
+\definecolor{heading}{HTML}{1F2937}
+\definecolor{muted}{HTML}{4B5563}
+\definecolor{rule}{HTML}{D1D5DB}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=1.1em,itemsep=2pt,topsep=3pt,parsep=0pt}
+
+\titleformat{\section}
+  {\large\bfseries\color{heading}}
+  {}
+  {0pt}
+  {}
+  [\vspace{-4pt}\textcolor{rule}{\titlerule}]
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+
+\newcommand{\cvheader}[4]{
+  {\LARGE\bfseries #1}\\[3pt]
+  {\large #2}\\[5pt]
+  #3 \quad | \quad \href{mailto:#4}{#4}\\[3pt]
+}
+
+\newcommand{\role}[4]{
+  \textbf{#1} \hfill {\color{muted}#2}\\
+  {\color{muted}#3} \hfill {\color{muted}#4}
+}
+
+\newcommand{\project}[3]{
+  \textbf{#1} \hfill {\color{muted}#2}\\
+  {\color{muted}#3}
+}
+
+\begin{document}
+
+\cvheader
+  {Audrey Blaise}
+  {IT Solutions Architect | Secure Infrastructure | Remote Access}
+  {Luxembourg | \href{https://www.linkedin.com/in/audrey-blaise-32136270}{linkedin.com/in/audrey-blaise-32136270}}
+  {audrey.blaise@trollprod.org}
+
+\section{Profile}
+
+IT Solutions Architect with a strong infrastructure engineering background, specialized in secure infrastructure, remote access platforms and infrastructure automation. Nearly 10 years of consulting experience for the European Commission, evolving from Network Security Engineer to technical reference for Remote Access and then IT Solutions Architect. Combines operational experience in critical security services with architecture, standardization, automation and compliance-driven delivery.
+
+\section{Core Expertise}
+
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}p{3.3cm}X@{}}
+Architecture & Secure infrastructure, solution architecture, remote access, bastion architecture, platform modernization, high availability, capacity planning.\\
+Automation & Ansible, AWX, GitLab CI/CD, NetBox, Node-RED, compliance validation, deployment verification, infrastructure standardization.\\
+Security & Network security, VPN, privileged access, security hardening, secrets management, PKI, auditability, compliance by design.\\
+Platforms & Linux, Windows, macOS, VMware, AWS, Pulse Secure / Ivanti Connect Secure, StrongSwan, Warpgate, HashiCorp Vault.\\
+Development & Python, Bash and Go used to automate infrastructure, validate platforms and expose operational metrics.\\
+\end{tabularx}
+
+\section{Professional Experience}
+
+\role{IT Solutions Architect}{2024 -- Present}{NTT DATA, consulting mission for the European Commission}{Luxembourg}
+\begin{itemize}
+  \item Design secure infrastructure and remote access solutions for critical European Commission environments.
+  \item Define technical architectures, standards, automation patterns, validation approaches and documentation.
+  \item Work with Product Owners, Project Managers, architects, Network Security, Linux, Cloud, CMDB, Compliance and SOC teams.
+  \item Support strategic projects around remote access modernization, AWS administrative access and automated platform delivery.
+\end{itemize}
+
+\vspace{4pt}
+\role{Remote Access Technical Reference / Primary Engineer}{2021 -- 2024}{NTT Ltd. / NTT DATA, consulting mission for the European Commission}{Luxembourg}
+\begin{itemize}
+  \item Acted as main technical reference for Remote Access platforms in a critical 24/7 production context.
+  \item Led expert-level analysis, architecture input, platform evolution, impact assessments and support for Network Security teams.
+  \item Contributed to the migration from proprietary VPN technologies toward Open Source and more automated platforms.
+\end{itemize}
+
+\vspace{4pt}
+\role{Network Security Engineer}{2015 -- 2021}{Dimension Data / NTT Ltd., consulting mission for the European Commission}{Luxembourg}
+\begin{itemize}
+  \item Operated and evolved security services including firewalling, reverse proxy, proxy, DNS, load balancing, WAF and remote access.
+  \item Built a transverse understanding of critical infrastructure operations, security constraints and production change management.
+  \item Progressively specialized in Remote Access and became a key escalation point for VPN platform operations and evolution.
+\end{itemize}
+
+\section{Selected Projects}
+
+\project{AWS Privileged Access Platform}{2024 -- Present}{Warpgate, AWS, Vault, GitLab CI/CD, Ansible, Node-RED, Hurl, Prometheus, Go}
+\begin{itemize}
+  \item Designed an Open Source bastion platform to secure administrator SSH access to AWS environments.
+  \item Validated Warpgate through a MoSCoW functional analysis after comparison with market alternatives.
+  \item Designed the CI/CD chain covering linting, documentation generation, build, automated deployment, functional testing and acceptance validation.
+  \item Automated deployment with Ansible, managed secrets with HashiCorp Vault and automated technical workflows with Node-RED.
+  \item Developed a Go Prometheus exporter to expose platform-specific metrics not available natively.
+  \item Delivered an industrialized MVP improving access centralization, traceability, auditability and reduction of direct SSH access.
+\end{itemize}
+
+\vspace{4pt}
+\project{Migration to an Open Source Remote Access Platform}{2021 -- Present}{StrongSwan, Linux, F5, PKI, NetBox, AWX, GitLab CI/CD}
+\begin{itemize}
+  \item Contributed to the architecture and migration of a StrongSwan-based IPsec platform replacing part of the historical Pulse Secure / Ivanti Connect Secure service.
+  \item Designed architectures for administrator populations and supported migration from the legacy platform.
+  \item Integrated NetBox as source of truth, IPAM and inventory for platform automation.
+  \item Integrated AWX for provisioning, configuration, updates and platform testing.
+  \item Moved local Git repositories to GitLab and introduced the first CI/CD pipelines, initially focused on linting.
+  \item Implemented compliance tests verifying configuration, certificates and expected platform state after deployment or change.
+\end{itemize}
+
+\vspace{4pt}
+\project{Enterprise Remote Access Platform Modernization}{2016 -- 2021}{Pulse Secure / Ivanti Connect Secure, VMware, F5 BIG-IP, Python, Bash, Ansible, Selenium}
+\begin{itemize}
+  \item Participated in the modernization of a critical Remote Access platform used by European institutions, agencies and external providers.
+  \item Supported the move from physical appliances to a virtualized, highly available and more scalable architecture.
+  \item Worked on appliance sizing, capacity planning, user profiles, environment segregation and load balancing architecture.
+  \item Developed automation with Python, Bash and Ansible for provisioning, configuration generation and administration tasks.
+  \item Helped reduce new appliance deployment time from around two hours to less than one hour depending on the operation.
+  \item Implemented security hardening automation around Ivanti Integrity Checks, compromise detection, VM shutdown, evidence preservation for CERT, restaging and Selenium-based validation.
+\end{itemize}
+
+\section{Technical Environment}
+
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}p{3.3cm}X@{}}
+Remote Access & Pulse Secure, Ivanti Connect Secure, StrongSwan, Cisco ASA, Warpgate.\\
+Infrastructure & Linux, Windows, macOS, VMware, AWS, DNS, Load Balancing, PKI, CMDB, REST API, Netconf.\\
+Security & Firewalling, reverse proxy, proxy, WAF, VPN, bastion, secrets management, security hardening.\\
+Automation & Ansible, AWX, GitLab CI/CD, NetBox, Node-RED, Selenium, Hurl.\\
+Programming & Python, Bash, Go.\\
+\end{tabularx}
+
+\section{Languages}
+
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}p{3.3cm}X@{}}
+French & Native.\\
+English & Daily use in an international environment: technical documentation, architecture meetings, technical workshops, project teams and supplier communication.\\
+\end{tabularx}
+
+\end{document}
